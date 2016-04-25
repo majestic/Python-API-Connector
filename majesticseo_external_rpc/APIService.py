@@ -41,7 +41,7 @@ class APIService:
 	This constructs a new instance of the APIService module.
 	'application_id' is the unique identifier for your application - for api requests, this is your "api key" ... for OpenApp request, this is your "private key".
 	'endpoint' is required and must point to the url you wish to target; ie: enterprise or developer.
-	E.g. api_service = ApiService.new('9A7R8Q4T8FA7GBYA4', 'http://developer.majesticseo.com/api_command'); 
+	E.g. api_service = ApiService.new('ABC123MYAPIKEY', 'https://developer.majestic.com/api_command'); 
 	"""
 	def __init__(self, application_id, end_point):
 		self.application_id = application_id
@@ -75,8 +75,9 @@ class APIService:
 
 	def execute_request(self, parameters, timeout):
 		parameters = urllib.urlencode(parameters)
-		request = urllib2.Request(self.end_point, parameters)
-		response = urllib2.urlopen(request, None, timeout)
+		request = urllib2.Request(self.end_point)
+		response = urllib2.urlopen(request, parameters, timeout)
+		
 		try:
 			return Response(response)
 		except Exception:

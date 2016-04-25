@@ -31,32 +31,32 @@
 
 # NOTE: The code below is specifically for the GetIndexItemInfo API command
 #       For other API commands, the arguments required may differ.
-#       Please refer to the Majestic SEO Developer Wiki for more information
+#       Please refer to the Majestic Developer Wiki for more information
 #       regarding other API commands and their arguments.
 
 from majesticseo_external_rpc.APIService import *
     
 if(__name__ == '__main__'):
-    endpoint = 'http://enterprise.majesticseo.com/api_command'
+    endpoint = 'https://api.majestic.com/api_command'
 
     print ('\n***********************************************************'
             + '*****************')
 
     print ('\nEndpoint: ' + endpoint)
 
-    if('http://enterprise.majesticseo.com/api_command' == endpoint):
+    if('https://api.majestic.com/api_command' == endpoint):
         print ('\nThis program is hard-wired to the Enterprise API.')
         
         print ('\nIf you do not have access to the Enterprise API, '
-            + 'change the endpoint to: \nhttp://developer.majesticseo.com/api_command.')
+            + 'change the endpoint to: \nhttps://developer.majestic.com/api_command.')
     else:
         print ('\nThis program is hard-wired to the Developer API '
             + 'and hence the subset of data \nreturned will be substantially '
             + 'smaller than that which will be returned from \neither the '
-            + 'Enterprise API or the Majestic SEO website.')
+            + 'Enterprise API or the Majestic website.')
 
         print ('\nTo make this program use the Enterprise API, change '
-            + 'the endpoint to: \nhttp://enterprise.majesticseo.com/api_command.')
+            + 'the endpoint to: \nhttps://api.majestic.com/api_command.')
 
     print ('\n***********************************************************'
                     + '*****************')
@@ -68,7 +68,7 @@ if(__name__ == '__main__'):
     app_api_key = raw_input('\nPlease enter your API key:\n')
 
     print ('\nPlease enter the list of items you wish to query seperated by commas: '
-            + '\n(e.g. majesticseo.com, majestic12.co.uk)')
+            + '\n(e.g. majestic.com, majestic12.co.uk)')
 
     items_to_query = raw_input()
     items = items_to_query.split(', ')
@@ -99,7 +99,7 @@ if(__name__ == '__main__'):
                     value = row[key]
                     print ' ' + str(key) + ' ... ' + str(value)
 
-        if('http://developer.majesticseo.com/api_command' == endpoint):
+        if('https://developer.majestic.com/api_command' == endpoint):
             print ('\n\n***********************************************************'
                 + '*****************')
 
@@ -108,10 +108,10 @@ if(__name__ == '__main__'):
             print ('\nThis program is hard-wired to the Developer API '
                 + 'and hence the subset of data \nreturned will be substantially '
                 + 'smaller than that which will be returned from \neither the '
-                + 'Enterprise API or the Majestic SEO website.')
+                + 'Enterprise API or the Majestic website.')
 
             print ('\nTo make this program use the Enterprise API, change '
-                + 'the endpoint to: \nhttp://enterprise.majesticseo.com/api_command.')
+                + 'the endpoint to: \nhttps://api.majestic.com/api_command.')
 
             print ('\n***********************************************************'
                 + '*****************')
@@ -126,13 +126,13 @@ if(__name__ == '__main__'):
         print ('\n  Endpoint: \t' + endpoint)
         print ('  API Key: \t' + app_api_key)
 
-        if('http://enterprise.majesticseo.com/api_command' == endpoint):
+        if('https://api.majestic.com/api_command' == endpoint):
             print ('\n  Is this API Key valid for this Endpoint?')
 
             print ('\n  This program is hard-wired to the Enterprise API.')
 
             print ('\n  If you do not have access to the Enterprise API, '
-                + 'change the endpoint to: \n  http://developer.majesticseo.com/api_command.')
+                + 'change the endpoint to: \n  https://developer.majestic.com/api_command.')
 
         print ('\n***********************************************************'
                     + '*****************')
