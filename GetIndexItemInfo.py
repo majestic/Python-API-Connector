@@ -97,7 +97,8 @@ if(__name__ == '__main__'):
             for key in sorted(row.keys()):
                 if('Item' != key):
                     value = row[key]
-                    print ' ' + str(key) + ' ... ' + str(value)
+                    print(' ' + eval(repr(key).encode('utf-8')) + ' ... ' + eval(repr(value).encode('utf-8')))
+                    #print ' ' + str(key) + ' ... ' + str(value)
 
         if('https://developer.majestic.com/api_command' == endpoint):
             print ('\n\n***********************************************************'
