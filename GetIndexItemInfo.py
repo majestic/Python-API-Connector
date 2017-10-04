@@ -99,7 +99,7 @@ if(__name__ == '__main__'):
                     value = row[key]
                     #print(' ' + eval(repr(key).encode('utf-8')) + ' ... ' + eval(repr(value).encode('utf-8')))
                     #print ' ' + str(key) + ' ... ' + str(value)
-                    print u' '.join((key, '...', value)).strip()
+                    print u' ... '.join((key,value))
 
         if('https://developer.majestic.com/api_command' == endpoint):
             print ('\n\n***********************************************************'
