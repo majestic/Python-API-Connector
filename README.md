@@ -13,7 +13,7 @@ This will be helpful as then you can import in the library from another director
 
 On Windows it will be somthing similar to this 
 ```
-add C:\project\lib\Python-API-Connector` to the PYTHONPATH variable. 
+set PYTHONPATH=C:\project\lib\Python-API-Connector;
 ```
 On linux, in the terminal it will look something like this: 
 ```
