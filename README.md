@@ -1,4 +1,4 @@
-Python-API-Connector
+Python-API-Connector(for Python 2.7.0)
 ====================
 
 Use the https://majestic.com connectors to access web data from one of the largest web indexes available. 
@@ -17,7 +17,7 @@ set PYTHONPATH=C:\project\lib\Python-API-Connector;
 ```
 On linux, in the terminal it will look something like this: 
 ```
-set PYTHONPATH=/usr/project/lib/Python-API-Connector
+export PYTHONPATH=/usr/project/lib/Python-API-Connector
 ```
 Examples
 -------------
