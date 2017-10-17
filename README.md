@@ -30,7 +30,12 @@ There are a few examples of using the API-Connector in the following scripts:
 * GetBackLinkData.py 
   * GetBacklinkData will return rows of data with information about all the pages linking to a given URL or domain
   
-The follwoing code is from GetIndexItemInfo
+The follwoing code is from GetIndexItemInfo.py, it will shows how the API-Connector can be used.
+```
+api_service = APIService(app_api_key, endpoint)
+response = api_service.execute_command('GetIndexItemInfo', parameters)
+```
+
 
 
 Further notes  
